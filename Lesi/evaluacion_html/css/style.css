@@ -1,0 +1,26 @@
+body{
+    background-color: aquamarine;
+}
+header{
+    background-color: black;
+}
+h1{
+    color: darkseagreen;
+    text-align: center;
+    font-size: 3em;
+}
+nav{
+    background-color: darkseagreen;
+}
+main{ 
+    background-color: dodgerblue;
+    text-align: center;
+}
+aside{ 
+    background-color: deeppink;
+    text-align: center;
+ }
+footer{
+    background-color: yellow;
+    text-align: center;
+}
