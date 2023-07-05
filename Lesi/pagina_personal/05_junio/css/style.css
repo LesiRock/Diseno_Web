@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Pixels&display=swap'); /*pegado de @import de Google fonts, va hasta arriba de la hoja de CSS*/
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+1+Code&family=Rubik+Pixels&display=swap');
+
+*{
+    margin: 0%;
+    padding: 0%;
+}
+/* ESTILOS DE NAV */
+nav p{
+    font-family: 'Rubik Pixels', cursive; /*pegado de Google Fonts, son las CSS rules to specific family*/
+    font-size: 3em; /* Tamaño de letra responsive*/
+    letter-spacing: 20px; /*Espaciado de las letras */
+    color: midnightblue;
+    text-shadow: 10px -5px 100px green; /*primer numero:arriba o abajo, segundo derecha o izquierda, tercero intensidad y cuarto el color de la sombra*/
+}
+
+li{
+    background: linear-gradient(midnightblue, white, green); /*background es para el fondo puede ser en imagen, color solido o degradado, linear-gradient es para el degradado de colores, pueden ser varios*/
+    color: cornflowerblue;
+    list-style: none; /*para quitar los puntitos de la lista*/
+    width: 70px; /*Para darle tamaño*/
+    height: 20px;
+    margin-bottom: 20px; /*margen de los elementos, para separarlos*/
+    padding: 20px; /*solo se puso un valor para todos los lados*/
+    text-align: center;
+    border: solid 3px black; /*primer valor el tipo de borde, segundo el tamaño y tercero el color*/
+    border-radius: 30px; /*redondear el borde*/
+    margin-right: 20px; /* acomodarlo a la derecha*/
+}
+
+/*Seudoclase es un elemento qu se activa con un evento */
+
+li:hover{ /*Cuando pase el cursor aplica otro estilo*/
+    /*opacity: 0.5; Se vuelve opaco*/
+    /*width: 2em;  Se hace más pequeño*/
+    background: blue; /*cambia el fondo*/
+    color:yellow; /*cambia el color del texto*/
+    border: solid 3px red; /*cambia el color del bordo*/
+
+}
+
+nav{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu{
+    display: flex;
+}
+
+/*TERMINA NAV/*
+
+/*Establecemos el 100% de ancho y 100% alto a la pantalla*/
+body{
+    font-family: 'M PLUS 1 Code', sans-serif;
+}
+
+header{
+    width: 100%; /*se mide en porcentaje*/
+    height: 70vh; /* se mide en viewport height vh*/
+    /*display: flex;
+    align-items: center;*/ /*Para centrar los elementos en todo lo que abarca*/
+    background: url(../img/fondo.jpg); /*para poner imagen como fondo de pantalla*/ /*.. para salir de la carpeta*/
+    background-repeat: no-repeat; /*para darle formeto no repetir*/
+    background-size: cover; /*cubra todo*/
+    background-position: center; /*centrada*/
+}
+
+nav{
+    height: 20vh;
+}
+
+.caja{
+    height: 50vh;
+    display: flex;
+}
+
+.cajita{
+    height: 50vh;
+    width: 50%;
+    overflow: auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+h1{
+    width: 50%; /*tamaño del contenedor*/
+    font-size: 4em; /*tamaño de la fuente*/
+}
+
+.cajita p{
+    width: 50%;
+    font-size: 1.5em;
+}
+
+.cajita img{
+    border-radius: 50px; /*para redondear borde*/
+    width: 50%;
+}
+
+span{
+    color: crimson;
+}
+
+nav img{
+    display: none;
+}
+
+/*Comienza sección ACERCA DE MI*/
+.contenedor{
+    width: 90%;
+    height: 30vh;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.texto{
+    background-color: #dcdcd481; /*rgba, la a es transparencia*/
+    height: 25vh;
+    border-top-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.texto h2{
+    font-size: 2em;
+}
+.texto p{
+    width: 80%;
+    font-size: 1.5em;
+}
+
+/*AQUI COMIENZA EL MODELO RESPONSIVO PARA CELULAR*/
+@media(max-width: 900px){    /*este estilo aplica de 0 a 900px*/
+    .menu{
+    display: none; /*para que NO se mustre*/
+    }
+
+nav img{
+    display: block; /*para que se mustre*/
+}
+header{
+    height: 100vh;
+}
+.caja{
+    height: 80vh;
+    flex-direction: column;
+}
+.cajita{
+    height: 40vh;
+    width: 100%;
+}
+h1{
+    width: 80%;
+}
+p{
+    width: 80%;
+}
+
+}
